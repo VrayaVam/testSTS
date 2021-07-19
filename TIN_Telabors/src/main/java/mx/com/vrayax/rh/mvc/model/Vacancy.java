@@ -14,7 +14,7 @@ public class Vacancy {
 	private String image = "no-image.jpg";
 
 	public Vacancy() {
-		// TODO Auto-generated constructor stub
+		//constructor por default
 	}
 
 
