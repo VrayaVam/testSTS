@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>Detalle de la vacante de trabajo</h1>
+	<h3 th:text="'Titulo: '+${detail_vacancy.title}"></h3>
+	<!-- <h3 th:text="'Publicacion: '+${detail_vacancy.publicationDate}"></h3>
+	<h3 th:text="'Publicacion: '+${detail_vacancy.publicationDate.format(detail_localDateTimeFormat)}"></h3> 
+	<h3 th:text="${#temporals.format(detail_vacancy.publicationDate, 'dd/MM/yyyy HH:mm')}"></h3>-->
+	<h3 th:text="'Publicacion: '+${#temporals.format(detail_vacancy.publicationDate, 'dd MMM uuuu')}"></h3>
+	<h3 th:text="'Salario: $'+${detail_vacancy.salary}"></h3>
+	<h3 th:text="'Descripcion: '+${detail_vacancy.description}"></h3>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pagina Principal</title>
+</head>
+<body>
+	<!-- 
+	<h1 th:text="${mensaje}">Bienvenido a Telabors App</h1>
+	
+	<br>
+	<h2>hoy es: [[${fecha}]]</h2>
+	 -->
+	 <h1>Bienvenido</h1>
+	 <!--  <h2 >Oferta de Trabajo hoy: [[${home_currentDate}]]</h2>-->
+	 <h2 th:text="'Oferta de Trabajo hoy: '+${#dates.format(home_currentDate, 'dd MMM y')}"></h2>
+	 <h3 th:text="'Titulo: '+${home_title}"></h3>
+	<!-- <h3 th:text="'Fecha de publicacion: '+${home_pubDate}"></h3>-->
+	 <h3 th:text="'Fecha de publicacion: '+${#temporals.format(home_pubDate, 'dd MMM uuuu')}"></h3>
+	<!--  <h3 th:text="'Publicacion: '+${#dates.formatISO(home_pubDate, 'dd MMM uuuu')}"></h3>-->
+	<!--   <p th:text="${#dates.format(home_pubDate, 'dd MMM uuuu')}"></p>-->
+	 <h3 th:text="'Salario ofrecido: $'+${home_salary}"></h3>
+	 <h3 th:text="'Vigencia: '+${home_beInForce}"></h3>
+	 <h3 th:text="'Numero de plazas: '+${home_posNumber}"></h3>
+</body>
+</html>
