@@ -154,5 +154,10 @@ public class HomeController {
 		}
 		return vacancies;
 	}
+	
+	@GetMapping("/testing")
+	public String test() {
+		return "Test dentro del controller";
+	}
 
 }
